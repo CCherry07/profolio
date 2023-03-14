@@ -9,10 +9,12 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   autoprefixer: ^10.4.14
   framer-motion: ^9.0.7
+  i18next: ^22.4.11
   maath: ^0.5.2
   postcss: ^8.4.21
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-i18next: ^12.2.0
   react-router-dom: ^6.8.1
   react-tilt: ^0.1.4
   react-vertical-timeline-component: ^3.6.0
@@ -25,9 +27,11 @@ dependencies:
   '@react-three/drei': 9.57.2_rcvoonm5fsedyguskwhdpk5eum
   '@react-three/fiber': 8.12.0_xor7byvqlg4baqj6ymfbcmaax4
   framer-motion: 9.1.7_biqbaboplfbrettd7655fr4n2y
+  i18next: 22.4.11
   maath: 0.5.2_three@0.149.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-i18next: 12.2.0_nuvg7z3l7c7q3mgp6kac62miay
   react-router-dom: 6.8.2_biqbaboplfbrettd7655fr4n2y
   react-tilt: 0.1.4_biqbaboplfbrettd7655fr4n2y
   react-vertical-timeline-component: 3.6.0_react@18.2.0
@@ -1135,6 +1139,18 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /html-parse-stringify/3.0.1:
+    resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
+    dependencies:
+      void-elements: 3.1.0
+    dev: false
+
+  /i18next/22.4.11:
+    resolution: {integrity: sha512-ShfTzXVMjXdF2iPiT/wbizOrssLh9Ab6VpuVROihLCAu+u25KbZiEYVgsA0W6g0SgjPa/JmGWcUEV/g6cKzEjQ==}
+    dependencies:
+      '@babel/runtime': 7.21.0
+    dev: false
+
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -1441,6 +1457,26 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-i18next/12.2.0_nuvg7z3l7c7q3mgp6kac62miay:
+    resolution: {integrity: sha512-5XeVgSygaGfyFmDd2WcXvINRw2WEC1XviW1LXY/xLOEMzsCFRwKqfnHN+hUjla8ZipbVJR27GCMSuTr0BhBBBQ==}
+    peerDependencies:
+      i18next: '>= 19.0.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      html-parse-stringify: 3.0.1
+      i18next: 22.4.11
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-intersection-observer/8.34.0_react@18.2.0:
@@ -1802,6 +1838,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /void-elements/3.1.0:
+    resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /webgl-constants/1.1.1:
     resolution: {integrity: sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==}
