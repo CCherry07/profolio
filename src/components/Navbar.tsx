@@ -4,11 +4,12 @@ import { useTranslation } from 'react-i18next'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
-import { useClickTargetOutsite } from '../hooks'
+import { useClickTargetOutsite, useDocTitle } from '../hooks'
 const Navbar = () => {
-  const [active, setActive] = useState('/') // nav path 
+  const [active, setActive] = useState('') // nav path 
   const [showMenu, setShowMenu] = useState(false) // mobile menu
   const { t, i18n } = useTranslation()
+  useDocTitle(`Cherry7 | ${t(active ? active : 'Portfolio')}`)
   const handleChanegI18n = () => {
     const lang = i18n.language === 'en' ? 'zh' : 'en'
     i18n.changeLanguage(lang)
@@ -26,8 +27,10 @@ const Navbar = () => {
   })
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 backdrop-filter backdrop-blur-md`}
-      style={{ backgroundColor: 'rgba(0,0,0,0.2)', borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed 
+      top-0 z-20 backdrop-filter backdrop-blur-md bg-[rgba(0,0,0,0.2)]
+      border-solid border-b-gray-600 border-b-[1px]
+      `}
     >
       <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
         <Link to="/" className='flex items-center gap-2'
@@ -38,7 +41,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
           <p className='text-xl font-bold text-white cursor-pointer flex'>
-            Cherry7 &nbsp;<span className='sm:block hidden'>| {t('Introduction')}</span>
+            Cherry7 &nbsp;<span className='sm:block hidden'>| &nbsp;{t('Introduction')}</span>
           </p>
         </Link>
         <div className='flex  items-center gap-5'>
@@ -54,7 +57,7 @@ const Navbar = () => {
                       window.scrollTo(0, 0)
                     }}
                   >
-                    {title}
+                    {t(title)}
                   </a>
                 </li>
               ))
@@ -89,7 +92,7 @@ const Navbar = () => {
                         window.scrollTo(0, 0)
                       }}
                     >
-                      {title}
+                      {t(title)}
                     </a>
                   </li>
                 ))

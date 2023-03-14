@@ -7,6 +7,8 @@ i18n
     resources: {
       en: {
         translation: {
+          "About": "About",
+          "Work": "Work",
           "frontEndDevelopmentEngineer": "Front End Development Engineer",
           "aboutMe": "About Me",
           "Introduction": "Introduction",
@@ -29,6 +31,8 @@ i18n
       },
       zh: {
         translation: {
+          "About": "关于",
+          "Work": "工作",
           "frontEndDevelopmentEngineer": "前端开发工程师",
           "aboutMe": "关于我",
           "Introduction": "简介",
@@ -40,7 +44,7 @@ i18n
           "experience": "经验",
           "skills": "技能",
           "projects": "项目",
-          "contact": "联系",
+          "Contact": "联系",
           "contactMe": "联系我",
           "contactMeDescription": "如果您有任何问题或建议，请联系我。",
           "contactMeDescription2": "我会尽快回复您。",
