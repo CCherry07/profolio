@@ -6,8 +6,16 @@ import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
 import { useClickTargetOutsite } from '../hooks'
 const Navbar = () => {
-  const [active, setActive] = useState('') // nav path 
+  const [active, setActive] = useState('/') // nav path 
   const [showMenu, setShowMenu] = useState(false) // mobile menu
+
+  useEffect(() => {
+    const hashName = window.location.hash.slice(1)
+    if (hashName) {
+      setActive(hashName[0].toUpperCase() + hashName.slice(1))
+    }
+  }, [])
+
   const menuRef = useRef(null)
   useClickTargetOutsite(menuRef, () => {
     showMenu && setShowMenu(false)
@@ -32,7 +40,7 @@ const Navbar = () => {
           {
             navLinks.map(({ id, title }) => (
               <li key={id}>
-                <Link to={id}
+                <a href={`#${id}`}
                   className={`${active === title ? 'text-white' : 'text-secondary'
                     } hover:text-white cursor-pointer font-medium text-lg`}
                   onClick={() => {
@@ -41,7 +49,7 @@ const Navbar = () => {
                   }}
                 >
                   {title}
-                </Link>
+                </a>
               </li>
             ))
           }
@@ -58,7 +66,7 @@ const Navbar = () => {
               {
                 navLinks.map(({ id, title }) => (
                   <li key={id}>
-                    <Link to={id}
+                    <a href={`#${id}`}
                       className={`${active === title ? 'text-white' : 'text-secondary'
                         } hover:text-white cursor-pointer font-poppins font-medium text-md`}
                       onClick={() => {
@@ -68,7 +76,7 @@ const Navbar = () => {
                       }}
                     >
                       {title}
-                    </Link>
+                    </a>
                   </li>
                 ))
               }
