@@ -31,14 +31,14 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant(0)}>
-        <p className={styles.sectionSubText}>
+        <div className={styles.sectionSubText}>
           <span className="text-[#9153ff]">IntroDuction</span>
           <h2 className={styles.sectionHeadText}>
             Overview.
           </h2>
-        </p>
+        </div>
       </motion.div>
-      <motion.p variants={fadeIn('', '', 0.1, 1)}
+      <motion.div variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-md mx-w-3xl leading-[30px]"
       >
         <ul>
@@ -48,7 +48,7 @@ const About = () => {
           <li>📫 How to reach me: email: c_chenjunguang@163.com</li>
           <li>⚡ Fun fact: Like watch anime.</li>
         </ul>
-      </motion.p>
+      </motion.div>
 
       <div className='mt-20 flex flex-wrap gap-10 items-center justify-center'>
         {
