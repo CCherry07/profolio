@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 // @ts-ignore
 import Tilt from 'react-tilt'
@@ -28,13 +27,14 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
 }
 
 const About = () => {
+  const { t } = useTranslation()
   return (
     <>
       <motion.div variants={textVariant(0)}>
         <div className={styles.sectionSubText}>
-          <span className="text-[#9153ff]">IntroDuction</span>
+          <span className="text-[#9153ff]">{t('INTRODUCTION')}</span>
           <h2 className={styles.sectionHeadText}>
-            Overview.
+            {t("OVERVIEW")}.
           </h2>
         </div>
       </motion.div>
@@ -42,10 +42,10 @@ const About = () => {
         className="mt-4 text-secondary text-md mx-w-3xl leading-[30px]"
       >
         <ul>
-          <li>🔭 I’m currently working on React component framework @Cdesign</li>
+          <li>🔭 I’m currently working on React component framework <a className='jump' href='https://github.com/CCherry07/Cdesign' target={'_blank'}>@Cdesign</a></li>
           <li>🌱 I’m currently learning 🧵 web design, and so on.</li>
           <li>🤔 I’m looking for help with 🥚 React code design.</li>
-          <li>📫 How to reach me: email: c_chenjunguang@163.com</li>
+          <li>📫 How to reach me: email: <a className='jump' href="mailto:c_chenjunguang@163.com">c_chenjunguang@163.com</a></li>
           <li>⚡ Fun fact: Like watch anime.</li>
         </ul>
       </motion.div>
