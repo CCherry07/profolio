@@ -2,8 +2,27 @@ import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { useTranslation } from "react-i18next"
 import { ComputersCanvas } from "./canvas"
+import { useEffect, useRef, useState } from "react"
+import Typed from "typed.js"
 const Hero = () => {
+  const typedRef = useRef(null);
   const { t } = useTranslation()
+  const [typedStr, setTypedStr] = useState('Cherry7.')
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: [typedStr],
+      loop: true,
+      typeSpeed: 200,
+      backDelay: 500,
+      fadeOut: true,
+      backSpeed: 100,
+      cursorChar: ''
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, [typedStr]);
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -13,7 +32,7 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>
-            Hi,&nbsp;&nbsp;I'm<span className="text-[#9153ff]">Cherry7</span>
+            Hi,&nbsp;&nbsp;I'm<span className="text-[#9153ff]" ref={typedRef}>Cherry7</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {t('frontEndDevelopmentEngineer')}<br />
