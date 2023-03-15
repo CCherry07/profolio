@@ -27,6 +27,8 @@ i18n
           "contactMeDescription3": "Thank you for your support.",
           "OVERVIEW": "OVERVIEW",
           "INTRODUCTION": "INTRODUCTION",
+          "What i have done so far": "What i have done so far",
+          "Work Experience": "Work Experience",
         }
       },
       zh: {
@@ -51,6 +53,8 @@ i18n
           "contactMeDescription3": "感谢您的支持。",
           "OVERVIEW": "概述",
           "INTRODUCTION": "简介",
+          "What i have done so far": "我做过的事情",
+          "Work Experience": "工作经验",
         }
       }
     },
