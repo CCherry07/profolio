@@ -42,11 +42,11 @@ const About = () => {
         className="mt-4 text-secondary text-md mx-w-3xl leading-[30px]"
       >
         <ul>
-          <li>🔭 I’m currently working on React component framework <a className='jump' href='https://github.com/CCherry07/Cdesign' target={'_blank'}>@Cdesign</a></li>
-          <li>🌱 I’m currently learning 🧵 web design, and so on.</li>
-          <li>🤔 I’m looking for help with 🥚 React code design.</li>
-          <li>📫 How to reach me: email: <a className='jump' href="mailto:c_chenjunguang@163.com">c_chenjunguang@163.com</a></li>
-          <li>⚡ Fun fact: Like watch anime.</li>
+          <li>🔭 {t('I’m currently working on React component framework')} <a className='jump' href='https://github.com/CCherry07/Cdesign' target={'_blank'}>@Cdesign</a></li>
+          <li>🌱 {t('I’m currently learning 🧵 web design, and so on')}</li>
+          <li>🤔 {t('I’m looking for help with 🥚 React code design')}</li>
+          <li>📫 {t('How to reach me: email')} <a className='jump' href="mailto:c_chenjunguang@163.com">c_chenjunguang@163.com</a></li>
+          <li>⚡ {t('Fun fact: Like watch anime')}</li>
         </ul>
       </motion.div>
 

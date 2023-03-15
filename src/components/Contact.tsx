@@ -5,8 +5,10 @@ import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { EarthCanvas } from "./canvas"
 import { slideIn } from "../utils/motion"
+import { useTranslation } from "react-i18next"
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null)
+  const { t } = useTranslation()
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -42,41 +44,41 @@ const Contact = () => {
       <motion.div variants={slideIn('left', 'tween', .2, 1)}
         className='flex-[.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={`${styles.sectionSubText}`}>Get In Tout</p>
-        <p className={`${styles.sectionHeadText}`}>Conteact.</p>
+        <p className={`${styles.sectionSubText}`}>{t('GET IN TOUT')}</p>
+        <p className={`${styles.sectionHeadText}`}>{t('Conteact')}.</p>
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className="flex flex-col">
-            <span className='text-white font-medium mb-4'>Your Name.</span>
+            <span className='text-white font-medium mb-4'>{t('Your Name')}.</span>
             <input type="text" name='name' value={form.name}
               onChange={handleChange}
-              placeholder="What's your name ?"
+              placeholder={`${t("What's your name ?")}`}
               className='bg-tertiary py-4 px-6 rounded-lg placeholder:text-secondary
             text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </label>
           <label className="flex flex-col">
-            <span className='text-white font-medium mb-4'>Your Email.</span>
+            <span className='text-white font-medium mb-4'>{t('Your Email')}.</span>
             <input type="email" name='email' value={form.email}
               onChange={handleChange}
-              placeholder="What's your email ?"
+              placeholder={`${t("What's your email ?")}`}
               className='bg-tertiary py-4 px-6 rounded-lg placeholder:text-secondary
             text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </label>
           <label className="flex flex-col">
-            <span className='text-white font-medium mb-4'>Your Message.</span>
+            <span className='text-white font-medium mb-4'>{t('Your Message')}.</span>
             <textarea
               rows={7}
               name='message' value={form.message}
               onChange={handleChange}
-              placeholder="write your want to say !"
+              placeholder={`${t("Please Write Down What You Want To Say !")}`}
               className='bg-tertiary py-4 px-6 rounded-lg placeholder:text-secondary
             text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-500'
             />
           </label>
           <button type='submit' className='bg-tertiary py-4 px-6 rounded-xl w-fit shadow-md
            text-white font-bold shadow-primary outline-none'>
-            {isSending ? 'Sending...' : 'Send'}
+            {isSending ? t('Send') + '...' : t('Send')}
           </button>
         </form>
       </motion.div>

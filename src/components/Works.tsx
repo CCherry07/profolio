@@ -17,7 +17,7 @@ interface ProjectCardProps {
 }
 const ProjectCard = (props: ProjectCardProps) => {
   const { index, project } = props
-
+  const { t } = useTranslation()
   return (
     <motion.div variants={fadeIn('in', 'spring', index * .5, .75)}>
       <Tilt options={{ max: 45, scale: 1, speed: 450 }}
@@ -37,7 +37,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <div className="mt-5">
           <h3 className="text-white font-bold text-xl">{project.name}</h3>
           <p className="mt-2 text-secondary text-sm">
-            {project.description}
+            {t(project.description)}
           </p>
         </div>
         {/* tag */}
