@@ -39,7 +39,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
+          <img src={"https://avatars.githubusercontent.com/u/79909910?v=4"} alt="logo" className='w-9 h-9 object-contain rounded-full' />
           <p className='text-xl font-bold text-white cursor-pointer flex'>
             Cherry7 &nbsp;<span className='sm:block hidden'>| &nbsp;{t('Introduction')}</span>
           </p>
