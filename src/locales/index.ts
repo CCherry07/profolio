@@ -120,6 +120,10 @@ i18n
           "April": "四月",
           "May": "五月",
 
+          "June 2022 - September 2022": "2022年6月-2022年9月",
+          "September 2022 - March 2023": "2022年9月-2023年3月",
+
+
           "Testimonials": "感言",
           "WHAT OTHERS SAY": "他们怎么说",
           "FeiFei": "菲菲",
