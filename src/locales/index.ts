@@ -87,6 +87,7 @@ i18n
           "My Work": "我的工作",
           "Projects": "项目集",
           "Projects Dec": "以下项目通过我工作的真实示例展示了我的技能和经验。每个项目都通过指向代码存储库和其中的现场演示的链接进行了简要描述。它反映了我解决复杂问题、使用不同技术以及有效管理项目的能力",
+          "55haitao": "55海淘",
           "Chongqing College of Mobile Telecommunications": "重庆动通学院",
           "Bachelor of Engineering": "工学学士",
 
