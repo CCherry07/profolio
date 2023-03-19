@@ -20,7 +20,7 @@ export const useDocTitle = (title: string, keepOnUnmount: boolean = true) => {
   useEffect(() => {
     document.title = title
   }, [title])
-
+  
   useEffect(() => {
     return () => {
       if (!keepOnUnmount) {
